@@ -42,7 +42,7 @@ mvnw*
 
 .vscode
 .vertx
-
+.env
 
 
 

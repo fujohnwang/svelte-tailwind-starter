@@ -5,6 +5,13 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import sveltePreprocess from 'svelte-preprocess';
+import replace from '@rollup/plugin-replace';
+import { config } from 'dotenv';
+
+const configToReplace = {};
+for (const [key, v] of Object.entries(config().parsed)) {
+	configToReplace[`${key}`] = JSON.stringify(v);
+}
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -38,6 +45,14 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		replace({
+			include: ["src/**/*.js", "src/**/*.svelte"],
+			preventAssignment: true,
+			values: {
+				isProd: production,
+				...configToReplace
+			}
+		}),
 		svelte({
 			preprocess: sveltePreprocess({
 				sourceMap: !production,
@@ -64,7 +79,6 @@ export default {
 			dedupe: ['svelte']
 		}),
 		commonjs(),
-
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
 		!production && serve(),

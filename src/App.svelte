@@ -1,5 +1,13 @@
 <script>
-	 let name = "svelte";
+	let name = "svelte";
+
+	let envSample = isProd;
+	let host = mgtHost;
+	let port = mgtPort;
+
+	$:{
+		console.log(`${host}:${port}`)
+	}
 </script>
 
 <main>
