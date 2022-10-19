@@ -35,3 +35,13 @@ a scaffolding project for svelte and tailwindcss + daisyui
 ```
 
 `data-choose-theme` is the key!
+
+
+# DaisyUI 
+
+https://daisyui.com/components/
+
+
+
+
+
