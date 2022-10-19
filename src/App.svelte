@@ -19,12 +19,12 @@
 
 		<div class="navbar bg-base-100">
 			<div class="flex-1">
-				<a href="https://afoo.me" class="btn btn-ghost normal-case text-3xl">
+				<a href="https://afoo.me">
 					<img src="images/wfq-colored.png" alt/>
 				</a>
 			</div>
 			<div class="flex-none">
-				<div class="avatar"><div class="w-20 mask mask-squircle"><img src="images/fq.png" alt/></div></div>
+				<div class="avatar"><div class="w-20 mask mask-squircle"><a href="https://afoo.me"><img src="images/fq.png" alt/></a></div></div>
 			</div>
 		</div>
 
