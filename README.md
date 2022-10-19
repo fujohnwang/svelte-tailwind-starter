@@ -2,6 +2,14 @@
 
 a scaffolding project for svelte and tailwindcss + daisyui
 
+# How to use 
+
+```bash
+cp -Rv {current folder} {target folder}
+cd {target folder}
+sh reset.sh
+```
+
 # to add theme change 
 
 默认使用daisyui的luxury主题：
