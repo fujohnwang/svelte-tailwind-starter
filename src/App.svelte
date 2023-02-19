@@ -2,7 +2,7 @@
 	import SvelteLogo from 'virtual:icons/logos/svelte-icon';
 	import AddressIcon from '~icons/ic/baseline-add-location-alt';  // import 'ic:baseline-add-location-alt' 
 
-	let name = "svelte";
+	let title = "Hello Svelte!";
 
 	let envSample = isProd;
 	let host = mgtHost;
@@ -18,34 +18,41 @@
 	<div class="container mx-auto">
 
 		<div class="navbar bg-base-100">
-			<div class="flex-1">
-				<a href="https://afoo.me">
-					<img src="images/wfq-colored.png" alt/>
-				</a>
+			<div class="flex-1 hidden lg:block text-4xl font-black bg-gradient-to-r from-blue-900 to-ember-900 inline-block text-transparent bg-clip-text">
+				王福强的工具箱
+			</div>
+			<div class="flex-auto">
+				<h1 class="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-900">
+					{title}
+				</h1>
 			</div>
 			<div class="flex-none">
 				<div class="avatar"><div class="w-20 mask mask-squircle"><a href="https://afoo.me"><img src="images/fq.png" alt/></a></div></div>
 			</div>
 		</div>
 
-
-		<div class="flex py-6 justify-center">
-			<div class="p-6 space-y-3 text-center max-w-2xl">
+		<!-- MAIN CONTENT, replace it as needed -->
+		
+		<div class="w-full pt-12 space-y-3 text-center">
 <!--				<SvelteLogo/>-->
 <!--				<AddressIcon/>-->
-				<h1 class="text-6xl font-bold">Hello {name}!</h1>
-				<p >Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+			<p >Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 
-				<div class="card w-96 bg-base-100 shadow-xl">
-					<div class="card-body">
-						<h2 class="card-title">Card title!</h2>
-						<p class="text-left">If a dog chews shoes whose shoes does he choose?</p>
-						<div class="card-actions justify-end">
-							<button class="btn btn-primary">Buy Now</button>
-						</div>
+			<div class="card w-full bg-base-100 shadow-xl">
+				<div class="card-body">
+					<h2 class="card-title">Card title!</h2>
+					<p class="text-left">If a dog chews shoes whose shoes does he choose?</p>
+					<div class="card-actions justify-end">
+						<button class="btn btn-primary">Buy Now</button>
 					</div>
 				</div>
-<!--HR-->
+			</div>
+		</div>
+		
+
+
+		<!-- ----------------------HR---------------------- -->
+		<div class="mt-6">
 				<svg
 						width="100%"
 						height="10%"
@@ -151,24 +158,24 @@
 							id="path1872"
 							transform="scale(0.75)" />
 				</svg>
-
-				<footer class="footer items-center text-neutral-content">
-					<div class="items-center grid-flow-col">
-						<p>Copyright © 2022 - <a href="https://afoo.me">afoo.me</a> All right reserved</p>
-					</div>
-					<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-						<a href="https://twitter.com/fujohnwang">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-						</a>
-						<a href="https://www.youtube.com/c/fujohnwang">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-						</a>
-					</div>
-				</footer>
-			</div>
 		</div>
+
 	</div>
 </main>
+
+<footer>
+	<div class="flex items-center justify-center">
+		<div class="px-3">
+			<p>Copyright © 2022 - <a href="https://afoo.me">afoo.me</a> All right reserved</p>
+		</div>
+		<a href="https://twitter.com/fujohnwang">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+		</a>
+		<a href="https://www.youtube.com/c/fujohnwang">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+		</a>
+	</div>
+</footer>
 
 <style lang="postcss" global>
 	@tailwind base;
